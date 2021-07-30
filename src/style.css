@@ -1,0 +1,33 @@
+.raceArea{
+    margin: auto !important;
+}
+.raceItem span {
+  display: block;
+  position: absolute;
+  bottom: 1px;
+}
+.raceItem span em {
+  color: #000 !important;
+
+  font-weight: bold !important;
+}
+.raceItem span i {
+  font: 400 13px Arial !important;
+  color: #000 !important;
+  font-weight: bold !important;
+}
+.raceItem span i::before {
+    content: " (";
+  }
+.raceItem span i:after {
+  content: " cases)";
+}
+.text-center{
+    text-align: center;
+}
+.underLine{
+    margin: 5px auto;
+    height: 3px;
+    width: 968px;
+    background-color: #000;
+}
