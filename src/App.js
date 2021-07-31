@@ -88,16 +88,19 @@ function App() {
       (i + 1) % finalData.length),
       350
     );
-    console.log(timerId)
     return () => clearInterval(timerId);
   
   }, [finalData]);
 
+  useEffect(()=>{
+    setMediaItem(finalData[index]);
+  },[index])
   // ---- set data to format of react-chart-race when state name : number change.
   useEffect(() => {
     console.log(index)
     
-    setMediaItem(finalData[index]);
+  
+    
     if (mediaItem) {
       if (mediaItem.countryInfor.length) {
         let dataCountry = mediaItem.countryInfor.map((data, index) => {
@@ -112,7 +115,7 @@ function App() {
         setData(dataCountry);
       }
     }
-  }, [index]);
+  }, [mediaItem]);
 
   return (
     <div>
